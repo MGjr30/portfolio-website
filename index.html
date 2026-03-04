@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Personal portfolio showcasing skills, projects, hobbies, and contact information." />
-  <title>Your Name | Portfolio</title>
+  <meta name="description" content="Mikaal Ghani - Computer Science student portfolio." />
+  <title>Mikaal Ghani | Portfolio</title>
 
-  <!-- Favicon (SVG data URL, no extra file needed) -->
+  <!-- Favicon (no extra file needed) -->
   <link rel="icon"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111827'/%3E%3Cpath d='M18 44V20h8l6 10 6-10h8v24h-7V31l-7 11h-1l-7-11v13z' fill='%233B82F6'/%3E%3C/svg%3E" />
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Cpath d='M18 44V20h8l6 10 6-10h8v24h-7V31l-7 11h-1l-7-11v13z' fill='%233b82f6'/%3E%3C/svg%3E" />
 
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
@@ -22,8 +22,8 @@
       <div class="brand">
         <span class="brand-mark" aria-hidden="true">◆</span>
         <div class="brand-text">
-          <p class="brand-name">Your Name</p>
-          <p class="brand-tagline">Your Field (e.g., Mechanical Engineering Student)</p>
+          <p class="brand-name">Mikaal Ghani</p>
+          <p class="brand-tagline">Computer Science Student • American University of Sharjah</p>
         </div>
       </div>
 
@@ -45,7 +45,7 @@
         <button class="btn btn-ghost" id="themeBtn" type="button" aria-pressed="false">
           Toggle theme
         </button>
-        <a class="btn btn-primary" href="#contact">Hire / Contact</a>
+        <a class="btn btn-primary" href="#contact">Contact</a>
       </div>
     </div>
   </header>
@@ -54,38 +54,43 @@
     <section class="hero" aria-label="Intro">
       <div class="container hero-grid">
         <div class="hero-text">
-          <h1>Building practical, polished solutions.</h1>
+          <h1>Student portfolio for internships & tech roles.</h1>
           <p class="lead">
-            I’m <strong>Your Name</strong>, a <strong>your role</strong> focused on
-            <strong>your niche</strong>. I enjoy turning ideas into real projects and documenting the process.
+            I’m <strong>Mikaal Ghani</strong>, a <strong>Computer Science student</strong> at the
+            <strong>American University of Sharjah</strong>. I work as an <strong>IT Student Worker</strong>
+            and enjoy learning through real experience. I’m currently looking for internship opportunities.
           </p>
 
           <ul class="quick-facts" aria-label="Quick facts">
-            <li><span class="pill">Location</span> Sharjah / Dubai</li>
-            <li><span class="pill">Focus</span> e.g., CAD • FEA • Web</li>
-            <li><span class="pill">Open to</span> Internships / Graduate roles</li>
+            <li><span class="pill">Focus</span> Programming • Web Development • Problem Solving</li>
+            <li><span class="pill">Strengths</span> Communication • Time Management • Responsibility</li>
+            <li><span class="pill">Status</span> <span id="statusInline">Open to internships</span></li>
           </ul>
 
           <div class="hero-cta">
             <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-ghost" href="https://github.com/your-username" target="_blank" rel="noreferrer">
+            <a class="btn btn-ghost" href="https://github.com/MGjr30" target="_blank" rel="noreferrer">
               GitHub Profile
             </a>
           </div>
         </div>
 
         <figure class="hero-card">
-          <!-- Replace src with your own image path -->
+          <!-- Add a file called profile.jpg in the same folder -->
           <img class="profile-img"
                src="profile.jpg"
-               alt="Portrait of Your Name smiling (profile photo)"
+               alt="Profile photo of Mikaal Ghani"
                loading="lazy" />
           <figcaption class="hero-caption">
-            <p class="caption-title">Currently:</p>
-            <p id="statusText">Available for opportunities</p>
-            <button class="btn btn-small" id="statusBtn" type="button">
-              Update status
-            </button>
+            <p class="caption-title">Quick actions</p>
+            <p class="muted-small" id="statusText">Open to internships</p>
+            <div class="mini-actions">
+              <button class="btn btn-small" id="statusBtn" type="button">Update status</button>
+              <button class="btn btn-small" id="copyEmailBtn" type="button" data-email="b00099637@aus.edu">
+                Copy email
+              </button>
+            </div>
+            <p class="muted-small" id="copyStatus" aria-live="polite"></p>
           </figcaption>
         </figure>
       </div>
@@ -96,35 +101,33 @@
         <header class="section-header">
           <h2>About</h2>
           <p>
-            Write 4–6 lines that describe your background, strengths, and what roles you’re aiming for.
-            Keep it specific: tools you use, projects you’ve built, and what you want to work on next.
+            I’m Mikaal Ghani, a Computer Science student at the American University of Sharjah.
+            I work as an IT Student Worker, where I support users, troubleshoot issues, and learn real workplace skills.
+            I enjoy building my programming and web development skills and I’m looking for internship opportunities.
+            I’m confident in communication, problem-solving, and time management.
           </p>
         </header>
 
         <div class="about-grid">
           <article class="card">
-            <h3>What I do</h3>
+            <h3>Experience</h3>
             <p>
-              Example: CAD design, simulation (FEA), prototyping, and clean documentation.
-              I also build small web tools to present my work professionally.
+              IT Student Worker experience: helping users, solving technical issues, and improving support skills.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Leadership</h3>
+            <p>
+              I studied at Mawakeb School and learned leadership, responsibility in projects, and good time management.
             </p>
           </article>
 
           <article class="card">
             <h3>What I’m looking for</h3>
             <p>
-              Example: internships or entry-level roles where I can contribute to design, analysis,
-              testing, or automation and learn from experienced engineers.
+              Internships where I can grow as a developer, contribute to real work, and improve my skills.
             </p>
-          </article>
-
-          <article class="card">
-            <h3>Highlights</h3>
-            <ul class="checklist">
-              <li>Team collaboration and leadership experience</li>
-              <li>Strong problem solving and iteration mindset</li>
-              <li>Clear communication and documentation</li>
-            </ul>
           </article>
         </div>
       </div>
@@ -134,7 +137,7 @@
       <div class="container">
         <header class="section-header">
           <h2>Skills</h2>
-          <p>Here’s a structured overview (table used only for tabular data).</p>
+          <p>Table used only for structured (tabular) information.</p>
         </header>
 
         <div class="table-wrap" role="region" aria-label="Skills table" tabindex="0">
@@ -143,33 +146,33 @@
               <tr>
                 <th scope="col">Category</th>
                 <th scope="col">Skills</th>
-                <th scope="col">Tools</th>
+                <th scope="col">Tools / Platforms</th>
                 <th scope="col">Level</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Engineering</td>
-                <td>CAD, FEA, Design for Manufacture</td>
-                <td>SolidWorks/Onshape, ANSYS</td>
-                <td>Intermediate</td>
-              </tr>
-              <tr>
                 <td>Programming</td>
-                <td>JavaScript, Python (basics), Data handling</td>
-                <td>VS Code, Git</td>
-                <td>Intermediate</td>
+                <td>Problem solving, basic algorithms, debugging</td>
+                <td>VS Code, GitHub</td>
+                <td>Growing</td>
               </tr>
               <tr>
                 <td>Web</td>
-                <td>HTML, CSS, Responsive design</td>
+                <td>HTML, CSS, JavaScript (interactivity)</td>
                 <td>Chrome DevTools</td>
                 <td>Intermediate</td>
               </tr>
               <tr>
-                <td>Soft skills</td>
-                <td>Communication, teamwork, documentation</td>
-                <td>Notion/Docs</td>
+                <td>IT Support</td>
+                <td>Troubleshooting, user support, communication</td>
+                <td>Campus systems / Helpdesk tools</td>
+                <td>Strong</td>
+              </tr>
+              <tr>
+                <td>Soft Skills</td>
+                <td>Communication, time management, responsibility</td>
+                <td>Team collaboration</td>
                 <td>Strong</td>
               </tr>
             </tbody>
@@ -177,11 +180,12 @@
         </div>
 
         <div class="chips" aria-label="Skill tags">
-          <span class="chip">Git</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
           <span class="chip">Problem Solving</span>
-          <span class="chip">Presentation</span>
-          <span class="chip">Prototyping</span>
-          <span class="chip">Testing</span>
+          <span class="chip">Communication</span>
+          <span class="chip">IT Support</span>
         </div>
       </div>
     </section>
@@ -191,75 +195,71 @@
         <header class="section-header">
           <h2>Projects</h2>
           <p>
-            Add your real GitHub repository links below. Use the search to filter projects instantly.
+            These include my portfolio repo and placeholders you can replace with real repos.
+            Use search + filter to demonstrate JavaScript interactivity.
           </p>
         </header>
 
         <div class="project-controls">
           <label class="field">
             <span class="field-label">Search projects</span>
-            <input id="projectSearch" type="search" placeholder="Type to filter (e.g., gearbox, website, CAD)" />
+            <input id="projectSearch" type="search" placeholder="Type to filter (e.g., portfolio, js, website)" />
           </label>
 
           <div class="filters" aria-label="Project filters">
-            <button class="btn btn-small btn-ghost filter-btn" type="button" data-filter="all">All</button>
-            <button class="btn btn-small btn-ghost filter-btn" type="button" data-filter="engineering">Engineering</button>
+            <button class="btn btn-small btn-ghost filter-btn is-active" type="button" data-filter="all">All</button>
             <button class="btn btn-small btn-ghost filter-btn" type="button" data-filter="web">Web</button>
-            <button class="btn btn-small btn-ghost filter-btn" type="button" data-filter="automation">Automation</button>
+            <button class="btn btn-small btn-ghost filter-btn" type="button" data-filter="javascript">JavaScript</button>
+            <button class="btn btn-small btn-ghost filter-btn" type="button" data-filter="it">IT</button>
           </div>
         </div>
 
         <div class="grid projects-grid" id="projectsGrid">
-          <!-- Project 1 -->
-          <article class="card project" data-tags="engineering">
-            <h3>Acrylic Gearbox Design</h3>
-            <p>
-              Example: Designed a gearbox with iterative prototyping and analysis, documenting stress/buckling checks.
-            </p>
-            <ul class="meta">
-              <li><span class="badge">Engineering</span></li>
-              <li><span class="badge">CAD</span></li>
-              <li><span class="badge">FEA</span></li>
-            </ul>
-            <div class="card-actions">
-              <a class="link" href="https://github.com/your-username/gearbox-project" target="_blank" rel="noreferrer">
-                GitHub Repo →
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="card project" data-tags="web">
+          <article class="card project" data-tags="web javascript">
             <h3>Portfolio Website</h3>
             <p>
-              Responsive portfolio with accessible layout, clean styling, and JavaScript interactivity.
+              A responsive portfolio website using semantic HTML, external CSS, and JavaScript for interactivity.
             </p>
             <ul class="meta">
               <li><span class="badge">Web</span></li>
-              <li><span class="badge">HTML/CSS</span></li>
               <li><span class="badge">JS</span></li>
+              <li><span class="badge">Responsive</span></li>
             </ul>
             <div class="card-actions">
-              <a class="link" href="https://github.com/your-username/portfolio" target="_blank" rel="noreferrer">
+              <a class="link" href="https://github.com/MGjr30/portfolio-website" target="_blank" rel="noreferrer">
                 GitHub Repo →
               </a>
             </div>
           </article>
 
-          <!-- Project 3 -->
-          <article class="card project" data-tags="automation">
-            <h3>Study Planner Script</h3>
+          <article class="card project" data-tags="javascript">
+            <h3>JavaScript Mini App (Replace)</h3>
             <p>
-              Example: small script/tool to generate a revision plan or track progress.
+              Replace this with a real project (example: calculator, to-do list, quiz app).
             </p>
             <ul class="meta">
-              <li><span class="badge">Automation</span></li>
-              <li><span class="badge">JS</span></li>
-              <li><span class="badge">Productivity</span></li>
+              <li><span class="badge">JavaScript</span></li>
+              <li><span class="badge">DOM</span></li>
             </ul>
             <div class="card-actions">
-              <a class="link" href="https://github.com/your-username/study-planner" target="_blank" rel="noreferrer">
-                GitHub Repo →
+              <a class="link" href="https://github.com/MGjr30" target="_blank" rel="noreferrer">
+                Add repo link →
+              </a>
+            </div>
+          </article>
+
+          <article class="card project" data-tags="it">
+            <h3>IT Troubleshooting Notes (Replace)</h3>
+            <p>
+              Replace with a real repo (example: scripts, notes, or a small tool you built for support work).
+            </p>
+            <ul class="meta">
+              <li><span class="badge">IT</span></li>
+              <li><span class="badge">Support</span></li>
+            </ul>
+            <div class="card-actions">
+              <a class="link" href="https://github.com/MGjr30" target="_blank" rel="noreferrer">
+                Add repo link →
               </a>
             </div>
           </article>
@@ -273,23 +273,23 @@
       <div class="container">
         <header class="section-header">
           <h2>Hobbies</h2>
-          <p>Professional but human: show interests that reflect discipline, creativity, or teamwork.</p>
+          <p>Short and professional: interests that show consistency and teamwork.</p>
         </header>
 
         <div class="about-grid">
           <article class="card">
-            <h3>Gym / Fitness</h3>
-            <p>Consistent training and nutrition tracking. Builds discipline and long-term consistency.</p>
+            <h3>Gym</h3>
+            <p>Training regularly helps me stay disciplined and consistent.</p>
           </article>
 
           <article class="card">
-            <h3>Guitar</h3>
-            <p>Learning chord transitions and rhythm patterns. Helps with patience and repetition.</p>
+            <h3>Sports</h3>
+            <p>Table tennis, padel, and basketball. I enjoy competition and teamwork.</p>
           </article>
 
           <article class="card">
-            <h3>Making & Prototyping</h3>
-            <p>Hands-on build culture: rapid iteration, testing, and improving designs.</p>
+            <h3>Video games & food</h3>
+            <p>I like relaxing with games and trying different foods with friends and family.</p>
           </article>
         </div>
       </div>
@@ -299,7 +299,7 @@
       <div class="container">
         <header class="section-header">
           <h2>Contact</h2>
-          <p>Include your email and relevant social profiles.</p>
+          <p>Reach out for internships, collaborations, or project opportunities.</p>
         </header>
 
         <div class="contact-grid">
@@ -308,18 +308,18 @@
             <ul class="contact-list">
               <li>
                 <span class="label">Email:</span>
-                <a class="link" href="mailto:youremail@example.com">youremail@example.com</a>
+                <a class="link" href="mailto:b00099637@aus.edu">b00099637@aus.edu</a>
               </li>
               <li>
                 <span class="label">GitHub:</span>
-                <a class="link" href="https://github.com/your-username" target="_blank" rel="noreferrer">
-                  github.com/your-username
+                <a class="link" href="https://github.com/MGjr30" target="_blank" rel="noreferrer">
+                  github.com/MGjr30
                 </a>
               </li>
               <li>
                 <span class="label">LinkedIn:</span>
-                <a class="link" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">
-                  linkedin.com/in/your-handle
+                <a class="link" href="https://www.linkedin.com/in/mikaal-ghani-00175b255" target="_blank" rel="noreferrer">
+                  linkedin.com/in/mikaal-ghani-00175b255
                 </a>
               </li>
             </ul>
@@ -336,7 +336,7 @@
               <label class="field">
                 <span class="field-label">Message</span>
                 <textarea id="msgInput" name="message" rows="4" required
-                  placeholder="Write a short message (this demo form won’t actually send)."></textarea>
+                  placeholder="Write a short message (this demo won’t send)."></textarea>
               </label>
 
               <div class="form-row">
@@ -354,7 +354,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <p>© <span id="year"></span> Mikaal Ghani. All rights reserved.</p>
       <a class="link" href="#top">Back to top ↑</a>
     </div>
   </footer>
