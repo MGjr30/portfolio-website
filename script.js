@@ -1,11 +1,11 @@
-// ===== Utilities =====
+// Small helpers
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
 
-// ===== 1) DOM manipulation: set year automatically =====
+// ===== DOM manipulation: set year automatically =====
 $("#year").textContent = new Date().getFullYear();
 
-// ===== Mobile nav toggle (event listener + class toggle) =====
+// ===== Mobile nav toggle (event listener) =====
 const navToggle = $("#navToggle");
 const navMenu = $("#navMenu");
 
@@ -14,7 +14,6 @@ navToggle.addEventListener("click", () => {
   navToggle.setAttribute("aria-expanded", String(isOpen));
 });
 
-// Close menu after clicking a link (better UX on mobile)
 $$(".nav-link").forEach((link) => {
   link.addEventListener("click", () => {
     navMenu.classList.remove("open");
@@ -22,7 +21,7 @@ $$(".nav-link").forEach((link) => {
   });
 });
 
-// ===== 2) Theme toggle (event listener + DOM manipulation) =====
+// ===== Theme toggle (event listener + DOM manipulation) =====
 const themeBtn = $("#themeBtn");
 
 function setTheme(isLight) {
@@ -39,22 +38,42 @@ themeBtn.addEventListener("click", () => {
   setTheme(isLight);
 });
 
-// ===== Status button: content change (DOM manipulation) =====
+// ===== Status button: change content (DOM manipulation) =====
+const statusInline = $("#statusInline");
 const statusText = $("#statusText");
 const statusBtn = $("#statusBtn");
 
 const statuses = [
-  "Available for opportunities",
   "Open to internships",
-  "Currently building new projects",
-  "Busy this month — still open to messages"
+  "Available for opportunities",
+  "Currently learning web development",
+  "Busy with university — still open to messages"
 ];
 
 let statusIndex = 0;
 
 statusBtn.addEventListener("click", () => {
   statusIndex = (statusIndex + 1) % statuses.length;
+  statusInline.textContent = statuses[statusIndex];
   statusText.textContent = statuses[statusIndex];
+});
+
+// ===== Copy email button (event listener + DOM manipulation) =====
+const copyEmailBtn = $("#copyEmailBtn");
+const copyStatus = $("#copyStatus");
+
+copyEmailBtn.addEventListener("click", async () => {
+  const email = copyEmailBtn.dataset.email;
+
+  try {
+    await navigator.clipboard.writeText(email);
+    copyStatus.textContent = "Email copied!";
+  } catch {
+    // Fallback if clipboard blocked
+    copyStatus.textContent = `Copy manually: ${email}`;
+  }
+
+  setTimeout(() => (copyStatus.textContent = ""), 2000);
 });
 
 // ===== Projects filtering + search (DOM manipulation + events) =====
@@ -74,17 +93,18 @@ function matchesFilter(projectEl) {
 function matchesSearch(projectEl) {
   const q = projectSearch.value.trim().toLowerCase();
   if (!q) return true;
-  const text = projectEl.textContent.toLowerCase();
-  return text.includes(q);
+  return projectEl.textContent.toLowerCase().includes(q);
 }
 
 function updateProjects() {
   let shown = 0;
+
   projects.forEach((p) => {
     const show = matchesFilter(p) && matchesSearch(p);
     p.hidden = !show;
     if (show) shown += 1;
   });
+
   resultsText.textContent = `Showing ${shown} project${shown === 1 ? "" : "s"}.`;
 }
 
@@ -93,17 +113,17 @@ projectSearch.addEventListener("input", updateProjects);
 filterButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     activeFilter = btn.dataset.filter;
-    // Visual feedback: mark active filter button
+
     filterButtons.forEach((b) => b.classList.remove("is-active"));
     btn.classList.add("is-active");
+
     updateProjects();
   });
 });
 
-// initial render
 updateProjects();
 
-// ===== Contact form: char counter + simple validation (events + DOM manipulation) =====
+// ===== Contact form: char counter + simple validation =====
 const contactForm = $("#contactForm");
 const nameInput = $("#nameInput");
 const msgInput = $("#msgInput");
@@ -113,8 +133,7 @@ const formStatus = $("#formStatus");
 const MAX_CHARS = 240;
 
 function updateCharCount() {
-  const len = msgInput.value.length;
-  if (len > MAX_CHARS) {
+  if (msgInput.value.length > MAX_CHARS) {
     msgInput.value = msgInput.value.slice(0, MAX_CHARS);
   }
   charCount.textContent = `${msgInput.value.length} / ${MAX_CHARS}`;
@@ -131,11 +150,10 @@ contactForm.addEventListener("submit", (e) => {
 
   if (!nameOk || !msgOk) {
     formStatus.textContent = "Please enter a valid name (2+ chars) and a message (10+ chars).";
-    formStatus.style.opacity = "1";
     return;
   }
 
-  formStatus.textContent = "Looks good — copy/paste this message into an email and send it!";
+  formStatus.textContent = "Looks good — copy/paste this into an email and send it!";
   nameInput.value = "";
   msgInput.value = "";
   updateCharCount();
