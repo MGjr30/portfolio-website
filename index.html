@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio showcasing skills, projects, hobbies, and contact information." />
+  <title>Your Name | Portfolio</title>
+
+  <!-- Favicon (SVG data URL, no extra file needed) -->
+  <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111827'/%3E%3Cpath d='M18 44V20h8l6 10 6-10h8v24h-7V31l-7 11h-1l-7-11v13z' fill='%233B82F6'/%3E%3C/svg%3E" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">◆</span>
+        <div class="brand-text">
+          <p class="brand-name">Your Name</p>
+          <p class="brand-tagline">Your Field (e.g., Mechanical Engineering Student)</p>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          Menu
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#hobbies">Hobbies</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-ghost" id="themeBtn" type="button" aria-pressed="false">
+          Toggle theme
+        </button>
+        <a class="btn btn-primary" href="#contact">Hire / Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-label="Intro">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Building practical, polished solutions.</h1>
+          <p class="lead">
+            I’m <strong>Your Name</strong>, a <strong>your role</strong> focused on
+            <strong>your niche</strong>. I enjoy turning ideas into real projects and documenting the process.
+          </p>
+
+          <ul class="quick-facts" aria-label="Quick facts">
+            <li><span class="pill">Location</span> Sharjah / Dubai</li>
+            <li><span class="pill">Focus</span> e.g., CAD • FEA • Web</li>
+            <li><span class="pill">Open to</span> Internships / Graduate roles</li>
+          </ul>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-ghost" href="https://github.com/your-username" target="_blank" rel="noreferrer">
+              GitHub Profile
+            </a>
+          </div>
+        </div>
+
+        <figure class="hero-card">
+          <!-- Replace src with your own image path -->
+          <img class="profile-img"
+               src="profile.jpg"
+               alt="Portrait of Your Name smiling (profile photo)"
+               loading="lazy" />
+          <figcaption class="hero-caption">
+            <p class="caption-title">Currently:</p>
+            <p id="statusText">Available for opportunities</p>
+            <button class="btn btn-small" id="statusBtn" type="button">
+              Update status
+            </button>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-header">
+          <h2>About</h2>
+          <p>
+            Write 4–6 lines that describe your background, strengths, and what roles you’re aiming for.
+            Keep it specific: tools you use, projects you’ve built, and what you want to work on next.
+          </p>
+        </header>
+
+        <div class="about-grid">
+          <article class="card">
+            <h3>What I do</h3>
+            <p>
+              Example: CAD design, simulation (FEA), prototyping, and clean documentation.
+              I also build small web tools to present my work professionally.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>What I’m looking for</h3>
+            <p>
+              Example: internships or entry-level roles where I can contribute to design, analysis,
+              testing, or automation and learn from experienced engineers.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Highlights</h3>
+            <ul class="checklist">
+              <li>Team collaboration and leadership experience</li>
+              <li>Strong problem solving and iteration mindset</li>
+              <li>Clear communication and documentation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section-header">
+          <h2>Skills</h2>
+          <p>Here’s a structured overview (table used only for tabular data).</p>
+        </header>
+
+        <div class="table-wrap" role="region" aria-label="Skills table" tabindex="0">
+          <table class="skills-table">
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Skills</th>
+                <th scope="col">Tools</th>
+                <th scope="col">Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Engineering</td>
+                <td>CAD, FEA, Design for Manufacture</td>
+                <td>SolidWorks/Onshape, ANSYS</td>
+                <td>Intermediate</td>
+              </tr>
+              <tr>
+                <td>Programming</td>
+                <td>JavaScript, Python (basics), Data handling</td>
+                <td>VS Code, Git</td>
+                <td>Intermediate</td>
+              </tr>
+              <tr>
+                <td>Web</td>
+                <td>HTML, CSS, Responsive design</td>
+                <td>Chrome DevTools</td>
+                <td>Intermediate</td>
+              </tr>
+              <tr>
+                <td>Soft skills</td>
+                <td>Communication, teamwork, documentation</td>
+                <td>Notion/Docs</td>
+                <td>Strong</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="chips" aria-label="Skill tags">
+          <span class="chip">Git</span>
+          <span class="chip">Problem Solving</span>
+          <span class="chip">Presentation</span>
+          <span class="chip">Prototyping</span>
+          <span class="chip">Testing</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section-header">
+          <h2>Projects</h2>
+          <p>
+            Add your real GitHub repository links below. Use the search to filter projects instantly.
+          </p>
+        </header>
+
+        <div class="project-controls">
+          <label class="field">
+            <span class="field-label">Search projects</span>
+            <input id="projectSearch" type="search" placeholder="Type to filter (e.g., gearbox, website, CAD)" />
+          </label>
+
+          <div class="filters" aria-label="Project filters">
+            <button class="btn btn-small btn-ghost filter-btn" type="button" data-filter="all">All</button>
+            <button class="btn btn-small btn-ghost filter-btn" type="button" data-filter="engineering">Engineering</button>
+            <button class="btn btn-small btn-ghost filter-btn" type="button" data-filter="web">Web</button>
+            <button class="btn btn-small btn-ghost filter-btn" type="button" data-filter="automation">Automation</button>
+          </div>
+        </div>
+
+        <div class="grid projects-grid" id="projectsGrid">
+          <!-- Project 1 -->
+          <article class="card project" data-tags="engineering">
+            <h3>Acrylic Gearbox Design</h3>
+            <p>
+              Example: Designed a gearbox with iterative prototyping and analysis, documenting stress/buckling checks.
+            </p>
+            <ul class="meta">
+              <li><span class="badge">Engineering</span></li>
+              <li><span class="badge">CAD</span></li>
+              <li><span class="badge">FEA</span></li>
+            </ul>
+            <div class="card-actions">
+              <a class="link" href="https://github.com/your-username/gearbox-project" target="_blank" rel="noreferrer">
+                GitHub Repo →
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card project" data-tags="web">
+            <h3>Portfolio Website</h3>
+            <p>
+              Responsive portfolio with accessible layout, clean styling, and JavaScript interactivity.
+            </p>
+            <ul class="meta">
+              <li><span class="badge">Web</span></li>
+              <li><span class="badge">HTML/CSS</span></li>
+              <li><span class="badge">JS</span></li>
+            </ul>
+            <div class="card-actions">
+              <a class="link" href="https://github.com/your-username/portfolio" target="_blank" rel="noreferrer">
+                GitHub Repo →
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card project" data-tags="automation">
+            <h3>Study Planner Script</h3>
+            <p>
+              Example: small script/tool to generate a revision plan or track progress.
+            </p>
+            <ul class="meta">
+              <li><span class="badge">Automation</span></li>
+              <li><span class="badge">JS</span></li>
+              <li><span class="badge">Productivity</span></li>
+            </ul>
+            <div class="card-actions">
+              <a class="link" href="https://github.com/your-username/study-planner" target="_blank" rel="noreferrer">
+                GitHub Repo →
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <p class="muted" id="resultsText" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="section" id="hobbies">
+      <div class="container">
+        <header class="section-header">
+          <h2>Hobbies</h2>
+          <p>Professional but human: show interests that reflect discipline, creativity, or teamwork.</p>
+        </header>
+
+        <div class="about-grid">
+          <article class="card">
+            <h3>Gym / Fitness</h3>
+            <p>Consistent training and nutrition tracking. Builds discipline and long-term consistency.</p>
+          </article>
+
+          <article class="card">
+            <h3>Guitar</h3>
+            <p>Learning chord transitions and rhythm patterns. Helps with patience and repetition.</p>
+          </article>
+
+          <article class="card">
+            <h3>Making & Prototyping</h3>
+            <p>Hands-on build culture: rapid iteration, testing, and improving designs.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section-header">
+          <h2>Contact</h2>
+          <p>Include your email and relevant social profiles.</p>
+        </header>
+
+        <div class="contact-grid">
+          <article class="card">
+            <h3>Contact details</h3>
+            <ul class="contact-list">
+              <li>
+                <span class="label">Email:</span>
+                <a class="link" href="mailto:youremail@example.com">youremail@example.com</a>
+              </li>
+              <li>
+                <span class="label">GitHub:</span>
+                <a class="link" href="https://github.com/your-username" target="_blank" rel="noreferrer">
+                  github.com/your-username
+                </a>
+              </li>
+              <li>
+                <span class="label">LinkedIn:</span>
+                <a class="link" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noreferrer">
+                  linkedin.com/in/your-handle
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Quick message</h3>
+            <form id="contactForm" class="form" novalidate>
+              <label class="field">
+                <span class="field-label">Name</span>
+                <input id="nameInput" name="name" type="text" autocomplete="name" required />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Message</span>
+                <textarea id="msgInput" name="message" rows="4" required
+                  placeholder="Write a short message (this demo form won’t actually send)."></textarea>
+              </label>
+
+              <div class="form-row">
+                <span class="muted" id="charCount">0 / 240</span>
+                <button class="btn btn-primary" type="submit">Check message</button>
+              </div>
+
+              <p class="muted" id="formStatus" aria-live="polite"></p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <a class="link" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
